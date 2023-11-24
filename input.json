@@ -1,0 +1,12 @@
+{
+    "bams": [
+        {
+            "$dnanexus_link": "file-id"
+        },
+        {
+            "$dnanexus_link": "file-id"
+        }
+    ],
+    "family_number": "F09999",
+    "sample_number": "EX1234567"
+}
