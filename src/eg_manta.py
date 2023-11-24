@@ -41,7 +41,7 @@ def main(bams, family_number, sample_number):
     dxpy.download_dxfile({"$dnanexus_link": "file-GGZ90104fq4x6G1jKkF6Jz63"}, ref + ".fai")
 
     # create output file prefix
-    sample = f"{family_number.strip().replace(" ", "")}_{sample_number.strip().replace(" ", "")}"
+    sample = f"{family_number.strip().replace(' ', '')}_{sample_number.strip().replace(' ', '')}"
 
     # run manta shell script
     subprocess.run(["/home/dnanexus/run_manta.sh",
