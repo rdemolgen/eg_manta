@@ -25,6 +25,12 @@
       "class": "string",
       "optional": false,
       "help": ""
+    },
+    {
+        "name": "options",
+        "class": "string",
+        "optional": false,
+        "help": "Add options separated by spaces"
     }
   ],
   "outputSpec": [
@@ -40,7 +46,7 @@
   "runSpec": {
     "timeoutPolicy": {
       "*": {
-        "hours": 2
+        "hours": 6
       }
     },
     "interpreter": "python3",

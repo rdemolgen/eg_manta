@@ -26,10 +26,16 @@ This app runs dockerised Manta (version 1.6.0) https://github.com/Illumina/manta
     ],
     "family_number": "e.g F09999",
     "sample_number": "e.g. EX1234567"
+    "options": "e.g. --callRegions region.bed.gz --generateEvidenceBam"
 }
 ```
 2. Run the app \
 `dx run <app_id> -f <input.json> --destination <output_project-id>:<output_dir --tag <optional_description> -y`
+
+### Options
+
+`--callRegions <region.bed.gz>` - Specify genomic region in bgzip-compressed and tabix-indexed file. \
+`--generateEvidenceBam` - Generates bam files from SVs listed in candidate VCF file. Use `--region <chr20:1000-2000>` to specify restricted genomic regions.
 
 
 

@@ -18,7 +18,7 @@ import stat
 import subprocess
 
 @dxpy.entry_point('main')
-def main(bams, family_number, sample_number):
+def main(bams, family_number, sample_number, options):
     # give permission to run shell script
     os.chmod("/home/dnanexus/run_manta.sh", stat.S_IRWXU | stat.S_IRWXG | stat.S_IXOTH)
 
@@ -47,7 +47,8 @@ def main(bams, family_number, sample_number):
     subprocess.run(["/home/dnanexus/run_manta.sh",
         input_bam,
         ref,
-        sample
+        sample,
+        options
     ])
 
     # The following line fills in some basic dummy output and assumes

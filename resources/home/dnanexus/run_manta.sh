@@ -8,6 +8,7 @@ echo "--------------------"
 bam=$1
 ref=$2
 sample=$3
+options=$4
 
 # download samplot docker tar
 echo "Downloading docker tar file..."
@@ -24,6 +25,7 @@ echo "--------------------"
 echo "bam=$bam"
 echo "ref=$ref"
 echo "sample=$sample"
+echo "optons=$options"
 
 # make output folder
 mkdir -p /home/dnanexus/out
@@ -38,6 +40,7 @@ docker exec manta /manta-1.6.0.centos6_x86_64/bin/configManta.py \
     --bam $bam \
     --referenceFasta $ref \
     --runDir /data/out \
+    "$options"
 
 # run manta workflow
 echo "Running Manta workflow..."
